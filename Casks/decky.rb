@@ -1,6 +1,22 @@
+# Homebrew Cask for decky (Apple Silicon only).
+#
+# This file lives in the TAP repo (danielsussa/homebrew-decky) under Casks/decky.rb.
+# It is kept here in the app repo as the source of truth; the release workflow renders
+# it (filling the version + the arm64 DMG sha256) and pushes it to the tap on each
+# release. The sha256 is filled from the published DMG:
+#
+#   shasum -a 256 decky-<version>-arm64.dmg
+#
+# Then users install with:
+#   brew install --cask danielsussa/decky/decky
+#
+# Intel (x64) is not shipped: the cask has always been arm-only and the macos-13 CI
+# runner stalled in queue, blocking the cask bump. To re-add Intel, restore the x64
+# build matrix entry in release.yml, bring back `arch arm: "arm64", intel: "x64"` +
+# a dual `sha256 arm:/intel:` here, and template the url with `#{arch}`.
 cask "decky" do
-  version "0.1.1"
-  sha256 "bd4c4ea6eb77e162588bf0d529443eaa423bce6f4009bd4dbd73e849a99607ba"
+  version "0.1.2"
+  sha256 "4fa0ed06c991ba4fe02d17eb3d42103acd5566bce03f6bf464e1a039064d92c3"
 
   url "https://github.com/danielsussa/decky/releases/download/v#{version}/decky-#{version}-arm64.dmg"
   name "decky"
