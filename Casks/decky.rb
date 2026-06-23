@@ -1,6 +1,6 @@
 cask "decky" do
-  version "0.1.0"
-  sha256 "21c4fe2a99e47947f14a89155a1149bb4c3d55c6c91bc8173c69a82b59e19699"
+  version "0.1.1"
+  sha256 "bd4c4ea6eb77e162588bf0d529443eaa423bce6f4009bd4dbd73e849a99607ba"
 
   url "https://github.com/danielsussa/decky/releases/download/v#{version}/decky-#{version}-arm64.dmg"
   name "decky"
