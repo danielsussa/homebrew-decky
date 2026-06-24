@@ -15,8 +15,8 @@
 # build matrix entry in release.yml, bring back `arch arm: "arm64", intel: "x64"` +
 # a dual `sha256 arm:/intel:` here, and template the url with `#{arch}`.
 cask "decky" do
-  version "0.1.4"
-  sha256 "2308d542c2bd05e31c4c934864ee9ef7a7e08ab5c3911089a8e91e82ce4e2eae"
+  version "0.1.5"
+  sha256 "129c3ac91500d3ceb15c2b25dc2ee32f952476488037432aafc57e9daa00c770"
 
   url "https://github.com/danielsussa/decky/releases/download/v#{version}/decky-#{version}-arm64.dmg"
   name "decky"
